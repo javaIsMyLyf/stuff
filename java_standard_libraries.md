@@ -126,3 +126,11 @@
 # LinkedList\<E> Class
 - Implements List, Deque
 - Doubly linked list
+
+# ArrayDeque\<E> Class
+- Implements Deque
+- Dynamic array implementation
+- Interchangeable with LinkedList
+- Outperforms LinkedList often due to not needing to allocate new nodes and not having pointers to next and prev nodes
+- Amortised constant time for insertion/deletion at both ends
+- Linear insertion/remove from interior due to array implementation
