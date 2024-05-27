@@ -60,6 +60,12 @@
 - toArray(): Objcet[]
 - toArray(T[] a): \<T> T[]
 
+# SortedSet\<E> Interface
+- implements Set
+## Methods
+- first(): E
+- last(): E
+
 # Map\<K, V> Interface
 - Map of unique keys to values
 ## Methods
@@ -134,3 +140,33 @@
 - Outperforms LinkedList often due to not needing to allocate new nodes and not having pointers to next and prev nodes
 - Amortised constant time for insertion/deletion at both ends
 - Linear insertion/remove from interior due to array implementation
+
+# PriorityQueue\<E> Class
+- implements Queue
+- unbounded PQ based on heap
+- head is least element with respect to ordering
+## Constructor
+- PriorityQueue()
+  - Order according to natural ordering
+- must pass a Comparator for custom ordering
+
+# HashSet\<E> Class
+- implements Set
+- Constant time set operations, no ordering
+
+# LinkedHashSet\<E> Class
+- extends HashSet
+- in addition to hash set capabilites, maintains a doubly linked list of order of elem insertion
+- order not affected on re-insertion
+
+# TreeSet\<E> Class
+- implements SortedSet
+- logn set operations (add, remove, contains)
+## Methods
+- ceiling(E e): E
+  - Returns least element in set GTE to given elem, null if doesn't exist
+- floor(E e): E
+  - Same as ceiling but floor
+
+## HashMap\<K, V> Class
+- implements Map
