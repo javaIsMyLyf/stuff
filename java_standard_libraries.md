@@ -1,3 +1,13 @@
+# Regular Arrays
+```java
+int[] intArray = {1,2,3,4};
+// or
+int[] intArray = new int[4];
+```
+- both have their memory allocated at runtime
+- immutable size
+- values initialised to falsy values, 0 for ints, null for Objects, etc.
+
 # Iterable\<E> Interface
 ## Methods
 - forEach(Consumer<? super T> action): void
