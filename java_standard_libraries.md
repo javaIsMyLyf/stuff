@@ -121,6 +121,13 @@ PriorityQueue<Integer> pq = new PriorityQueue<>(new MaxHeapComparator());
 - values(): Collection\<V>
   - Returns a Collection view of the values contained in this map
 
+# Interface SortedMap\<K,V>
+- implements Map
+- Implementers:
+  - ConcurrentSkipList, TreeMap
+- cost: logarithmic lookup, insertion, deletion
+- benefits: sorted, so can traverse in order
+
 # Queue\<E> Interface
 - implements Collection
 ## Methods
