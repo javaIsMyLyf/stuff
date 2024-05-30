@@ -39,7 +39,26 @@ int[] intArray = new int[4];
 
 # Stream\<T> Interface
 
-# Comparator
+# Comparator\<T>
+- functional interface
+- comparison function, which imposes a total ordering on some collection of objects
+- If you need to pass a comparator that will simply reverse the natural ordering:
+  - Collections.reverseOrder()
+    - e.g. new PriorityQueue<>(Collections.reverseOrder())
+- To create your own custom comparator to pass to data structures:
+  - Create a class that implements Comparator\<T> and override the compare(T elem1, T elem2) function that will return -1 if elem1 comes before elem2, 0 if they are equal, and 1 otherwise
+  - e.g.
+```java
+class MaxHeapComparator implements Comparator<Integer> {
+    @Override
+    public int compare(Integer p1, Integer p2) {
+        if (p1.compareTo(p2) == 0) return 0;
+        if (p1.compareTo(p2) < 0) return 1;
+        return -1;
+    }
+}
+PriorityQueue<Integer> pq = new PriorityQueue<>(new MaxHeapComparator());
+```
 
 # List\<E> Interface
 - implements Collection\<E>
